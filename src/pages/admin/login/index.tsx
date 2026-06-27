@@ -37,7 +37,9 @@ export default function AdminLogin() {
       toast.success("Admin login successful");
       navigate("/admin/dashboard");
     } catch (error: any) {
-      toast.error(error.response?.data?.error || "Login failed");
+      console.error(error);
+      const msg = error.response?.data?.error || error.message || "Login failed";
+      toast.error(msg);
     } finally {
       setIsLoading(false);
     }
