@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://hrm-backend-fvf1.onrender.com/api',
+  baseURL: 'https://hrm-backend-fvf1.onrender.com/api',
 });
 
 // Interceptor to attach JWT token to every request
